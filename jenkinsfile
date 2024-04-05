@@ -1,0 +1,22 @@
+pipeline {
+	agent any
+	stages {
+		stage("checkout") {
+			steps {	
+				git
+'https://github.com/saranya-kakarla/project1.git 
+}
+}
+stage("test"){
+	steps{
+sh 'npm test'
+}
+}
+stage("deploy"){
+steps {
+sh 'npm run deploy'
+}
+}
+}
+}
+
